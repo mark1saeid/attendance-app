@@ -75,11 +75,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(100),
-                      child: Image.network(
-                        profile?.profilePic ?? '',
-                        fit: BoxFit.cover,
-                        width: 70,
+                      child: SizedBox(
                         height: 70,
+                        width: 70,
+                        child: Image.network(
+                          profile?.profilePic ?? '',
+                          fit: BoxFit.cover,
+                          width: 70,
+                          height: 70,
+                        ),
                       ),
                     )
                   ],
@@ -106,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(height: 20),
                 OtherMenu(),
                 const SizedBox(height: 20),
-                Information(),
+                // Information(),
                 const SizedBox(height: 30),
               ],
             ),
