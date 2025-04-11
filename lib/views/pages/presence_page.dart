@@ -28,7 +28,7 @@ class _PresencePageState extends State<PresencePage> {
 
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      return Future.error({'msg': 'Lokasi tidak aktif', 'status': 1});
+      return Future.error({'msg': 'location is not active', 'status': 1});
     }
 
     permission = await Geolocator.checkPermission();
@@ -36,7 +36,7 @@ class _PresencePageState extends State<PresencePage> {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
         return Future.error(
-            {'msg': 'Akses lokasi tidak diizinkan', 'status': 2});
+            {'msg': 'Location access is not permitted', 'status': 2});
       }
     }
 
@@ -62,7 +62,7 @@ class _PresencePageState extends State<PresencePage> {
       });
     }
     await Future.delayed(Duration(seconds: 2));
-    return Future.value({'msg': 'Lokasi berhasil ditemukan', 'status': 0});
+    return Future.value({'msg': 'Location successfully found', 'status': 0});
   }
 
   @override

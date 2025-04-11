@@ -51,10 +51,10 @@ class _SchedulePageState extends State<SchedulePage> {
             return NestedScrollView(
               headerSliverBuilder: (context, innerBoxScrolled) => [
                 AppBarSliver(
-                  title: 'Work schedule',
+                  title: 'Lectures schedule',
                   maxExtent: 100,
                   bottomChild: Text(
-                    'Work schedule',
+                    'Lectures schedule',
                     style: blackTextStyle.copyWith(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,

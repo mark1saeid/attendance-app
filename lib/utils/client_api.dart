@@ -1,8 +1,10 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:presensi_pintar_ta/provider/stream/auth_stream.dart';
 import 'package:presensi_pintar_ta/services/locator/navigation_service.dart';
 import 'package:presensi_pintar_ta/services/locator/token_service.dart';
 import 'package:presensi_pintar_ta/services/locator/locator.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 const baseApiUrl = 'http://attendance.14studio.co/api';
 
@@ -20,6 +22,15 @@ Dio clientApi() {
       },
     ),
   );
+  dio.interceptors.add(PrettyDioLogger(
+      requestHeader: true,
+      requestBody: true,
+      responseBody: true,
+      responseHeader: false,
+      error: true,
+      compact: true,
+      enabled: kDebugMode,
+     ));
 
   dio.interceptors.add(InterceptorsWrapper(
     onRequest: (
