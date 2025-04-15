@@ -70,11 +70,15 @@ class _ProfilePageState extends State<ProfilePage> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(100),
-                          child: Image.network(
-                            profile?.profilePic ?? '',
-                            fit: BoxFit.cover,
-                            width: 80,
+                          child: SizedBox(
                             height: 80,
+                            width: 80,
+                            child: Image.network(
+                              profile?.profilePic ?? '',
+                              fit: BoxFit.cover,
+                              width: 80,
+                              height: 80,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 15),
