@@ -59,7 +59,7 @@ class MainApp extends StatelessWidget {
               ),
         ),
         debugShowCheckedModeBanner: false,
-        title: 'Presensi TA',
+        title: 'Attendance ',
         initialRoute: '/',
         navigatorKey: locator<NavigationService>().navigatorKey,
         routes: {
