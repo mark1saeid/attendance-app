@@ -25,16 +25,6 @@ class OtherMenu extends StatelessWidget {
       'bgColor': Colors.blue.shade700.withOpacity(0.3),
       'routeName': '/annualLeaves'
     },
-    {
-      'title': 'calendar',
-      'icon': Icon(
-        Icons.calendar_month_outlined,
-        size: 35,
-        color: Colors.orange.shade700,
-      ),
-      'bgColor': Colors.orange.shade700.withOpacity(0.3),
-      'routeName': '/calendar'
-    },
   ];
 
   @override
@@ -72,7 +62,8 @@ class OtherMenu extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            borderRadius: const BorderRadius.all(Radius.circular(100)),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(100)),
                             color: item['bgColor'],
                           ),
                           child: item['icon'],

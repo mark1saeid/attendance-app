@@ -15,7 +15,7 @@ String parseUtcToLocal({
 }) {
   if (date == null) return '-';
   final dateUtc = DateFormat(utcPattern).parseUTC(date).toLocal();
-  final dateLocal = DateFormat(pattern, 'id').format(dateUtc);
+  final dateLocal = DateFormat(pattern, 'en').format(dateUtc);
 
   return dateLocal;
 }

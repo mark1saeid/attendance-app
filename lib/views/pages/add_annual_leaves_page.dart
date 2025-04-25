@@ -168,7 +168,7 @@ class _AddAnnualLeavePageState extends State<AddAnnualLeavePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      DateFormat('EEE', 'id').format(DateTime.parse(date)),
+                      DateFormat('EEE', 'en').format(DateTime.parse(date)),
                       style: whiteTextStyle.copyWith(
                           fontSize: 16, fontWeight: FontWeight.bold),
                     ),
