@@ -103,7 +103,7 @@ class _LeavesPageState extends State<LeavesPage> {
                   color: Colors.white,
                 ),
                 Text(
-                  'Tambah',
+                  'Add',
                   style: whiteTextStyle.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,

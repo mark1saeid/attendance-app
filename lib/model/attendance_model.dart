@@ -40,11 +40,11 @@ class AttendanceModel {
   }
 
   String get statusStr {
-    if (status == AttendanceStatus.late) return 'terlambat';
-    if (status == AttendanceStatus.present) return 'tepat waktu';
-    if (status == AttendanceStatus.leave) return 'izin';
-    if (status == AttendanceStatus.sickLeave) return 'izin sakit';
-    if (status == AttendanceStatus.annualLeave) return 'cuti';
+    if (status == AttendanceStatus.late) return 'late';
+    if (status == AttendanceStatus.present) return 'on time';
+    if (status == AttendanceStatus.leave) return 'permission';
+    if (status == AttendanceStatus.sickLeave) return 'sick leave';
+    if (status == AttendanceStatus.annualLeave) return 'holiday';
     return '';
   }
 
