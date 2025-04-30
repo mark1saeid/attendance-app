@@ -20,7 +20,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  initializeDateFormatting('en');
+  initializeDateFormatting('en-SA');
 
   serviceInit();
   runApp(const MainApp());

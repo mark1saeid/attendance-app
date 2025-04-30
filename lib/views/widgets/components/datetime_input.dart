@@ -75,7 +75,7 @@ class _DateTimeInputState extends State<DateTimeInput> {
                 readOnly: true,
                 controller: TextEditingController(
                   text: picker.value != null
-                      ? DateFormat(widget.dateFormat ?? 'dd MMMM yyyy', 'en')
+                      ? DateFormat(widget.dateFormat ?? 'dd MMMM yyyy', 'en-SA')
                           .format(picker.value!)
                       : '',
                 ),

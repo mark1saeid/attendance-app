@@ -45,7 +45,7 @@ class AttendanceBox extends StatelessWidget {
         children: [
           Center(
             child: Text(
-              DateFormat('EEEE, dd MMMM yyyy', 'en').format(DateTime.now()),
+              DateFormat('EEEE, dd MMMM yyyy', 'en-SA').format(DateTime.now()),
               style: blackTextStyle.copyWith(fontSize: 14),
             ),
           ),
