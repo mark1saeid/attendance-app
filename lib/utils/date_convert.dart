@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 String formatDateID(String pattern, String? dateStr) {
   if (dateStr == null) return "-";
   final date =
-      DateFormat(pattern, "id").format(DateTime.parse(dateStr).toLocal());
+      DateFormat(pattern, "en").format(DateTime.parse(dateStr).toLocal());
 
   return date;
 }
