@@ -24,7 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
   final List<Map<String, dynamic>> privateData = [
     {'title': 'Personal Info', 'icon': Icons.person, 'route': '/personal-info'},
     {
-      'title': 'Personnel Info',
+      'title': 'Personal Location',
       'icon': Icons.person_pin,
       'route': '/employee-info'
     },

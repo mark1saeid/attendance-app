@@ -71,22 +71,7 @@ class RecognitionService {
       w.round(),
       h.round(),
     );
-
-    // imglib.PngEncoder pngEncoder = imglib.PngEncoder();
-
-    // String path = '/storage/emulated/0/MyApp';
-
-    // bool isGrand = await Permission.manageExternalStorage.isGranted;
-    // if (!isGrand) {
-    //   await Permission.manageExternalStorage.request();
-    // }
     imglib.Image resize = imglib.copyResizeCropSquare(crop, 112);
-
-    // List<int> pngCrop = pngEncoder.encodeImage(crop);
-    // List<int> png = pngEncoder.encodeImage(resize);
-    // File('$path/face-recog-${DateTime.now().microsecondsSinceEpoch}.png').writeAsBytesSync(pngCrop, flush: true);
-    // File('$path/face-recog-${DateTime.now().millisecond}.png').writeAsBytesSync(png, flush: true);
-
     Float32List imgList = _imageToByteListFloat32(resize);
 
     return imgList;

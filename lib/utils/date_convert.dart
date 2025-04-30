@@ -22,12 +22,14 @@ String parseUtcToLocal({
 
 String timeHm(String? time) {
   if (time == null) return '-';
-  return time.substring(0, time.length - 3);
+  var dateTimeUtc = DateFormat.Hms().parseUTC(time).toLocal();
+  var timeIn12 = DateFormat.jm().format(dateTimeUtc);
+  return timeIn12.toString();
 }
 
 String timeParseHm(String? utcTime) {
   if (utcTime == null) return '-';
-  DateTime dateTimeUtc = DateFormat.Hms().parseUTC(utcTime).toLocal();
-
-  return DateFormat.Hm().format(dateTimeUtc);
+  var dateTimeUtc = DateFormat.Hms().parseUTC(utcTime).toLocal();
+  var timeIn12 = DateFormat.jm().format(dateTimeUtc);
+  return timeIn12.toString();
 }
