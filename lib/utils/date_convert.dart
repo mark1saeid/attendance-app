@@ -1,4 +1,7 @@
 import 'package:intl/intl.dart';
+import 'package:timezone/data/latest.dart' as tzData;
+import 'package:timezone/timezone.dart' as tz;
+
 
 String formatDateID(String pattern, String? dateStr) {
   if (dateStr == null) return "-";
@@ -29,7 +32,17 @@ String timeHm(String? time) {
 
 String timeParseHm(String? utcTime) {
   if (utcTime == null) return '-';
-  var dateTimeUtc = DateFormat.Hms().parse(utcTime).toLocal();
-  var timeIn12 = DateFormat.jm('en-SA').format(dateTimeUtc);
-  return timeIn12.toString();
+
+  tzData.initializeTimeZones();
+
+  final ksaTimeZone = tz.getLocation('Asia/Riyadh');
+
+  var dateTimeUtc =
+      DateFormat.Hms().parseUtc(utcTime); // Parse as UTC (not local)
+
+  var dateTimeKsa = tz.TZDateTime.from(dateTimeUtc, ksaTimeZone);
+
+  var timeIn12Format = DateFormat.jm('en-SA').format(dateTimeKsa);
+
+  return timeIn12Format;
 }
